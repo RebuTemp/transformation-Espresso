@@ -16,8 +16,7 @@ open your terminal or IDE and type `python Uniform_FTG.py`. All the input
 parameters are adjustable. More Details about these scripts are below.
 
 #### 1. Uniform_FTG.py
-The implementation of the Fibonacci-to-Type-II transformation algorithm
-proposed in Theorem 1. <br>
+The implementation of the Fibonacci-to-Type-II transformation algorithm. <br>
 
 For example, we transform a 4-bit Fibonacci NLFSR into all the possible
 uniform Galois NLFSRs. <br>
@@ -31,7 +30,7 @@ Input parameters of the Fibonacci NLFSR. <br>
 * The output function of the Fibonacci NLFSR `Z = [[2, 3]]` denotes <br>
 ![figure](figures/fig_9.png) <br>
 * The randomly generated initial state of the Fibonacci NLFSR such as
-`N0 = [0, 0, 0, 1]` denotes <br>
+`N0 = [0, 1, 1, 1]` denotes <br>
 ![figure](figures/fig_3.png) <br>
 * The monomials to be shifted `M = [[1], [3], [1, 2]]` denotes monomials
 x1, x3 and x1x2.
@@ -41,21 +40,19 @@ Output all the possible equivalent Galois NLFSRs. For example, one of
 the Galois NLFSR is represented by following parameters. <br>
 * The end positions the monomials are shifted to `BFTG = [3, 1, 2]`
 denote that x1 is not shifted, x3 is shifted to f1 and x1x2 is shifted to f2. <br>
-* The compensation list `CFTG = [-1, -1, [[1]], [[2], [0, 1]]]` (-1 represents 0 in Theorem 1) <br>
+* The compensation list `CFTG = [-1, -1, [[1]], [[2], [0, 1]]]` (-1 represents 0 in the description of the algorithm) <br>
 * The feedback functions of the Galois NLFSR
 `FFGal = [[[1]], [[2], [1]], [[3], [0, 1]], [[0], [1]]]` denotes <br>
 ![figure](figures/fig_10.png) <br>
 * The output function of the Galois NLFSR `ZGal = [[1], [2], [0, 1], [1, 3], [2, 3], [0, 1, 2]]` denotes <br>
 ![figure](figures/fig_11.png) <br>
-* The initial state of the Galois NLFSR `N0Gal = [0, 0, 0, 1]` denotes <br>
+* The initial state of the Galois NLFSR `N0Gal = [0, 1, 0, 0]` denotes <br>
 ![figure](figures/fig_6.png)
 
 #### 2. Uniform_GTF.py
-The implementation of the Type-II-to-Fibonacci transformation algorithm
-for uniform NLFSRs proposed in Theorem 2. <br>
+The implementation of the Type-II-to-Fibonacci transformation algorithm. <br>
 
-The input Galois NLFSR must be an uniform NLFSR which satisfy conditions
-in Definition 3.
+The input Galois NLFSR must be an uniform NLFSR. <br>
 For example, we run the code on the 256-bit Galois NLFSR
 in Espresso cipher and successfully transform it into a LFSR with feedback
 function below. <br>
