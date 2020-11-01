@@ -321,7 +321,7 @@ Z = [[2, 3]]
 N0 = []
 for i in range(n):
     N0.append(random.randint(0, 1))
-N0 = [0, 0, 0, 1]
+N0 = [0, 1, 0, 0]
 
 print('FFFib = ', FF)
 print('ZFib = ', Z)
